@@ -24,12 +24,6 @@ The goal of this project is to:
 
 ---
 
-## 🤝 Collaboration
-
-This project was developed collaboratively with **[Jascify](https://github.com/jascify)**, focusing on clean code structure, consistent design, and teamwork throughout the development process.
-
----
-
 ## 📂 Features
 
 - Modern and minimalist UI design  
