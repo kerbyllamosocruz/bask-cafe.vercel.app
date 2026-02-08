@@ -1,0 +1,1 @@
+A collaborative web project with [Jascify]([https://example.com](https://github.com/jascify)). We created this site to showcase Bask Café’s products, ambiance, and brand story through a clean, modern interface.
