@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !api/
+RewriteRule ^(.*\.php)$ api/$1 [L]

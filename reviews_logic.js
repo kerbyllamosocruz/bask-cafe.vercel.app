@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       typeof API_CONFIG !== "undefined" && API_CONFIG.BASE_URL
         ? API_CONFIG.BASE_URL
         : "";
-    const url = `${baseUrl}/get_reviews.php?limit=${limit}`;
+    const url = baseUrl ? `${baseUrl}/get_reviews.php?limit=${limit}` : `get_reviews.php?limit=${limit}`;
 
     console.log(`Fetching reviews from: ${url}`); // Debugging
 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof API_CONFIG !== "undefined" && API_CONFIG.BASE_URL
           ? API_CONFIG.BASE_URL
           : "";
-      const submitUrl = `${baseUrl}/post_review.php`;
+      const submitUrl = baseUrl ? `${baseUrl}/post_review.php` : `post_review.php`;
 
       // Display loading or disable button here if desired
       const submitBtn = reviewForm.querySelector('button[type="submit"]');
