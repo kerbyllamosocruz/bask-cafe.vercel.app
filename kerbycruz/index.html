@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Kerby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png" type="image">
+	<meta charset = "UTF-8">
+	<meta content = "width=device-width, initial-scale=1.0"name = "viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="nav_container">
+      <div class="tab">
+        <a href="/kerbycruz/" target="_self">
+          <img id="logo" src="assets/logo.png" class="icon" alt="Logo" />
+        </a>
+        <button class="hamburger" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav class="nav_menu">
+          <ul class="nav_list">
+            <li><a href="/kerbycruz/" class="active">Home</a></li>
+            <li><a href="/kerbycruz/about/">About</a></li>
+            <li><a href="/kerbycruz/project/">Project</a></li>
+            <li><a href="/kerbycruz/connect/">Connect</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="intro">
+        <div>
+          <h1 id="greet">Greetings, I'm</h1>
+          <h2 id="name">Kerby Cruz.</h2>
+          <h3 id="title">IT Student</h3>
+          <p id="intro_paragraph">
+            A dedicated college student pursuing a Bachelor of Science in
+            Information Technology at Pamantasan ng Lungsod ng Valenzuela. Have a
+            strong passion for technology and always strive to expand my knowledge
+            in programming, software development, and emerging tech trends.
+          </p>
+          <p></p>
+        </div>
+        <div>
+          <img id="profile" src="assets/profile.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+      <div class="download">
+    <a href="assets/resume.pdf" download="Kerby_Cruz_Resume" class="download_button">Download Resume</a>
+  </div>
+</div>
+    </div>
+    <footer class="footer">
+      <div class="footer_left">
+        <a href="/kerbycruz/" target="_self">
+        <img src="assets/logo.png" alt="KC Logo" class="footer_logo">
+        </a>
+      </div>
+      <div class="footer_center">
+        <p>Kerby Llamoso Cruz©2025</p>
+        <p class="rights">All Rights Reserved</p>
+      </div>
+      <div class="footer_right">
+        <a href="https://facebook.com/kerbyllamosocruz" target="_blank">
+          <img src="assets/facebook.png" alt="Facebook" class="social_icon">
+          <p>Facebook.com/kerbyllamosocruz</p>
+        </a>
+        <a href="https://instagram.com/kerbyllamosocruz" target="_blank">
+          <img src="assets/instagram.png" alt="Instagram" class="social_icon">
+          <p>Instagram.com/kerbyllamosocruz</p>
+        </a>
+        <a href="https://github.com/kerbycruz" target="_blank">
+          <img src="assets/github.png" alt="GitHub" class="social_icon">
+          <p>Github.com/kerbycruz</p>
+        </a>
+      </div>
+    </footer>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav_menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav_list a").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }));
+    </script>
+  </body>
+</html>

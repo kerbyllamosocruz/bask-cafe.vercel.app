@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,13 +43,13 @@
       </div>
     </div>
     <div>
-  <img
-    class="promo_img"
-    src="asset/index/promo.png"
-    alt="Promotional Banner"
-    style="width: 100%;"
-  />
-</div>
+      <img
+        class="promo_img"
+        src="asset/index/promo.png"
+        alt="Promotional Banner"
+        style="width: 100%"
+      />
+    </div>
     <div class="ref_about">
       <div class="first_text">
         <h1>Welcome to Bask Café</h1>
@@ -209,7 +209,14 @@
         src="https://www.youtube.com/embed/akVrpet1JLQ"
         title="Bask Café Promotional Video"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+        "
         allowfullscreen
       >
       </iframe>
@@ -329,7 +336,9 @@
           <div class="copyright">
             Bask Café&copy; 2025. All rights reserved.
           </div>
-          <div class="footer_center">Designed & Developed by Aguilar & Cruz</div>
+          <div class="footer_center">
+            Designed & Developed by Aguilar & Cruz
+          </div>
           <div class="social_icons">
             <a
               href="https://www.facebook.com/profile.php?id=61569599993182"
@@ -379,16 +388,17 @@
     </footer>
     <script src="script.js" defer></script>
     <script src="hamburger.js" defer></script>
-    <script src="load_review.js" defer></script>
+    <script src="config.js" defer></script>
+    <script src="reviews_logic.js" defer></script>
     <script>
-      document.querySelectorAll('.category_card').forEach(card => {
-        card.addEventListener('click', () => {
-          const category = card.getAttribute('data-category')
+      document.querySelectorAll(".category_card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const category = card.getAttribute("data-category");
           window.location.href = `menu.html?category=${encodeURIComponent(
-            category
-          )}`
-        })
-      })
+            category,
+          )}`;
+        });
+      });
     </script>
   </body>
 </html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bask Café</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image" href="asset/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main_header">
+      <div class="header_container">
+        <div class="logo">
+          <a href="/">
+            <img src="asset/logo.png" alt="Bask Cafe Logo" id="logo" />
+          </a>
+        </div>
+        <nav class="main_nav" id="mainNav">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/menu.html">Menu</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/review.html" class="active">Review</a>
+        </nav>
+        <div class="hamburger" id="hamburger">☰</div>
+      </div>
+    </header>
+
+    <div class="header_img_container">
+      <img src="asset/index/header_img.png" width="100%" />
+      <div class="header-text">
+        <h1>Café Stories</h1>
+        <p>
+          What our customers love about Bask Café—real stories, real flavors.
+        </p>
+      </div>
+    </div>
+    <div class="review_container">
+      <iframe
+        class="review_vid"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/OC87OWn5Stc"
+        title="Customer Interview"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+        "
+        allowfullscreen
+      >
+      </iframe>
+      <div class="review_text">
+        <h1>Hear from Our Customers</h1>
+        <hr />
+        <p>
+          See what our customers have to say! Watch their stories and hear about
+          their favorite Bask Café moments.
+        </p>
+      </div>
+    </div>
+    <div class="review_border_box">
+      <h1>What Our Customers Are Saying</h1>
+    </div>
+
+    <!-- Reviews Container -->
+    <div class="review_grid_container" id="fullReviewsContainer">
+      <!-- Reviews will be loaded here by reviews_logic.js -->
+      <div style="text-align: center; width: 100%">Loading reviews...</div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem">
+      <button id="viewMoreBtn" class="view_more_btn" style="display: none">
+        View More
+      </button>
+    </div>
+
+    <div class="review_form_container">
+      <h2 class="review_form_title">Share Your Experience</h2>
+      <form id="reviewForm">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <select name="rating" id="rating" required>
+          <option value="" disabled selected>Rating (1-5)</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Very Good</option>
+          <option value="3">3 - Good</option>
+          <option value="2">2 - Fair</option>
+          <option value="1">1 - Poor</option>
+        </select>
+
+        <textarea
+          name="review"
+          id="review"
+          rows="4"
+          placeholder="Write your review..."
+          required
+        ></textarea>
+
+        <div class="review_button-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="footer_container">
+        <div class="footer_content">
+          <div class="logo">
+            <a href="/">
+              <img src="asset/logo.png" alt="Bask Cafe Logo" id="logo" />
+            </a>
+          </div>
+
+          <nav class="nav_menu">
+            <a href="/about.html">About Us</a>
+            <a href="/menu.html">Menu</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/review.html">Review</a>
+          </nav>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="copyright">
+            Bask Café&copy; 2025. All rights reserved.
+          </div>
+          <div class="footer_center">
+            Designed & Developed by Aguilar & Cruz
+          </div>
+
+          <div class="social_icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=61569599993182"
+              aria-label="Facebook"
+              target="_blank"
+            >
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/baskcafe_/"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="hamburger.js" defer></script>
+    <script src="reviews_logic.js" defer></script>
+  </body>
+</html>

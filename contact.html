@@ -195,7 +195,10 @@ document.getElementById("contact_form").addEventListener("submit", function (e) 
 
   const formData = new FormData(this);
 
-  fetch("contact_form_handler.php", {
+  const baseUrl = (typeof API_CONFIG !== 'undefined' && API_CONFIG.BASE_URL) ? API_CONFIG.BASE_URL : '';
+  const submitUrl = `${baseUrl}/contact_form_handler.php`;
+
+  fetch(submitUrl, {
     method: "POST",
     body: formData
   })
@@ -214,8 +217,16 @@ document.getElementById("contact_form").addEventListener("submit", function (e) 
 });
 </script>
 
+</script>
+
  <script src="script.js" defer></script>
  <script src="hamburger.js" defer></script>
+ <script src="config.js" defer></script>
+ <script>
+    // Re-attach event listener after config.js loads
+    // Actually, distinct script blocks run in order.
+    // We can just update the inline script logic.
+ </script>
 
   </body>
 </html>

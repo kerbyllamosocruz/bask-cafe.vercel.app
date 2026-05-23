@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project | Kerby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/logo.png" type="image">
+	<meta charset = "UTF-8">
+	<meta content = "width=device-width, initial-scale=1.0"name = "viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="nav_container">
+      <div class="tab">
+        <a href="/kerbycruz/" target="_self">
+          <img id="logo" src="../assets/logo.png" class="icon" alt="Logo" />
+        </a>
+        <button class="hamburger" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav class="nav_menu">
+          <ul class="nav_list">
+            <li><a href="/kerbycruz/">Home</a></li>
+            <li><a href="/kerbycruz/about/">About</a></li>
+            <li><a href="/kerbycruz/project/"class="active">Project</a></li>
+            <li><a href="/kerbycruz/connect/">Connect</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main_content">
+      <h2 id="header">Projects</h2>
+      <div class="project_container">
+        <div class="project_card" onclick="openModal('java-store')">
+          <div class="card_image">
+            <img src="../assets/javaministore.png" alt="Java Mini Store" />
+          </div>
+          <div class="card_content">
+            <h3>Java Mini Store</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('string-manipulation')">
+          <div class="card_image">
+            <img src="../assets/stringmanipulation.png" alt="String Manipulation" />
+          </div>
+          <div class="card_content">
+            <h3>String Manipulation</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('oop-project')">
+          <div class="card_image">
+            <img src="../assets/finalproject.png" alt="OOP Final Project" />
+          </div>
+          <div class="card_content">
+            <h3>OOP Final Project</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('marine-infographics')">
+          <div class="card_image">
+            <img src="../assets/marineinfographics.png" alt="Marine Infographics" />
+          </div>
+          <div class="card_content">
+            <h3>Marine Infographics</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('book-cover')">
+          <div class="card_image">
+            <img src="../assets/bookcover.png" alt="Book Cover Activity" />
+          </div>
+          <div class="card_content">
+            <h3>Multimedia: Book Cover Activity</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('grunge')">
+          <div class="card_image">
+            <img src="../assets/grunge.png" alt="Grunge Activity" />
+          </div>
+          <div class="card_content">
+            <h3>Multimedia: Grunge Activity</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('minimalist')">
+          <div class="card_image">
+            <img src="../assets/minimalist.png" alt="Minimalist Activity" />
+          </div>
+          <div class="card_content">
+            <h3>Multimedia: Minimalist Activity</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+
+        <div class="project_card" onclick="openModal('bask-cafe')">
+          <div class="card_image">
+            <img src="../assets/baskcafe.png" alt="Bask Café Website" />
+          </div>
+          <div class="card_content">
+            <h3>Bask Café Website</h3>
+            <p class="card_description">Click to learn more</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal_container" class="modal_container">
+        <div class="modal_content">
+          <span class="close_modal" onclick="closeModal()">&times;</span>
+          
+          <div id="java-store" class="modal">
+            <h2>Java Mini Store</h2>
+            <img src="../assets/javaministore.png" alt="Java Mini Store" />
+            <p>A simple store management system built with Java. Features include product management, inventory tracking, and basic sales operations.</p>
+          </div>
+
+          <div id="string-manipulation" class="modal">
+            <h2>String Manipulation</h2>
+            <img src="../assets/stringmanipulation.png" alt="String Manipulation" />
+            <p>A Java program demonstrating various string manipulation techniques including concatenation, substring operations, and string formatting.</p>
+          </div>
+
+          <div id="oop-project" class="modal">
+            <h2>OOP Final Project</h2>
+            <img src="../assets/finalproject.png" alt="OOP Final Project" />
+            <p>A project created using Visual Studio .NET Windows Forms.</p>
+          </div>
+
+          <div id="marine-infographics" class="modal">
+            <h2>Marine Infographics</h2>
+            <img src="../assets/marineinfographics.png" alt="Marine Infographics" />
+            <p>An informative infographic about marine life and conservation, created using design principles and data visualization techniques.</p>
+          </div>
+
+          <div id="book-cover" class="modal">
+            <h2>Multimedia: Book Cover Activity</h2>
+            <img src="../assets/bookcover.png" alt="Book Cover Activity" />
+            <p>A creative book cover design project demonstrating typography and layout principles in graphic design.</p>
+          </div>
+
+          <div id="grunge" class="modal">
+            <h2>Multimedia: Grunge Activity</h2>
+            <img src="../assets/grunge.png" alt="Grunge Activity" />
+            <p>A grunge-style design project exploring texture, layering, and artistic effects in digital art.</p>
+          </div>
+
+          <div id="minimalist" class="modal">
+            <h2>Multimedia: Minimalist Activity</h2>
+            <img src="../assets/minimalist.png" alt="Minimalist Activity" />
+            <p>A design activity that emphasizes simplicity, whitespace, and the use of only essential elements to create clean and focused compositions.</p>
+          </div>
+
+          <div id="bask-cafe" class="modal">
+            <h2>Bask Café Website</h2>
+            <img src="../assets/baskcafe.png" alt="Bask Café Website" />
+          <p>A collaborative project with Jasmine Miel T. Aguilar. We created this site to showcase Bask Café’s products, ambiance, and brand story through a clean, modern interface.</p>
+          <p style="margin-top: 15px; text-align: center;">
+              <a href="https://baskcafe.site/" target="_blank" style="color: #ffa500; text-decoration: none; font-size: 1.1em; font-family: 'Playfair Display', serif;">
+                Visit Website <i class="fas fa-external-link-alt" style="margin-left: 5px;"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_left">
+        <a href="/kerbycruz/" target="_self">
+        <img src="../assets/logo.png" alt="KC Logo" class="footer_logo">
+        </a>
+      </div>
+      <div class="footer_center">
+        <p>Kerby Llamoso Cruz©2025</p>
+        <p class="rights">All Rights Reserved</p>
+      </div>
+      <div class="footer_right">
+        <a href="https://facebook.com/kerbyllamosocruz" target="_blank">
+          <img src="../assets/facebook.png" alt="Facebook" class="social_icon">
+          <p>Facebook.com/kerbyllamosocruz</p>
+        </a>
+        <a href="https://instagram.com/kerbyllamosocruz" target="_blank">
+          <img src="assets/instagram.png" alt="Instagram" class="social_icon">
+          <p>Instagram.com/kerbyllamosocruz</p>
+        </a>
+        <a href="https://github.com/kerbycruz" target="_blank">
+          <img src="../assets/github.png" alt="GitHub" class="social_icon">
+          <p>Github.com/kerbycruz</p>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav_menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav_list a").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }));
+
+      function openModal(modalId) {
+        const modalContainer = document.getElementById('modal_container');
+        const modal = document.getElementById(modalId);
+        
+        document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+        
+        modal.style.display = 'block';
+        modalContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        const modalContainer = document.getElementById('modal_container');
+        modalContainer.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      window.onclick = function(event) {
+        const modalContainer = document.getElementById('modal_container');
+        if (event.target === modalContainer) {
+          closeModal();
+        }
+      }
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
