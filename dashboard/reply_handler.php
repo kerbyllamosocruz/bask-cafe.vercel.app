@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require_once '../config/db_connect.php';
+require_once '../api/config/db_connect.php';
 
 header('Content-Type: application/json');
 

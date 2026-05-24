@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../config/db_connect.php';
+require_once '../api/config/db_connect.php';
 
 function displayError($message) {
     echo '

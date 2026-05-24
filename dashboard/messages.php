@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-require_once '../config/db_connect.php';
+require_once '../api/config/db_connect.php';
 
 // Handle status filter
 $status_filter = isset($_GET['status']) ? $_GET['status'] : 'all';

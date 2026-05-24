@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-require_once '../../config/db_connect.php';
+require_once '../../api/config/db_connect.php';
 
 // Check if ID is provided
 if (isset($_GET['id']) && !empty($_GET['id'])) {

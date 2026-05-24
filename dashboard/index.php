@@ -9,7 +9,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     exit;
 }
 
-require_once '../config/db_connect.php';
+require_once '../api/config/db_connect.php';
 $testimonials_query = "SELECT * FROM bask_reviews ORDER BY created_at DESC";
 $testimonials_result = mysqli_query($conn, $testimonials_query);
 

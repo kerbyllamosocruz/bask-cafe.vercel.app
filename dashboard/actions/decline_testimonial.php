@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/db_connect.php';
+require_once '../../api/config/db_connect.php';
 // Check if ID is provided
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = mysqli_real_escape_string($conn, $_GET['id']);

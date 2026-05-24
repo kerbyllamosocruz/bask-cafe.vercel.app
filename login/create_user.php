@@ -1,5 +1,5 @@
 <?php
-require_once '../config/db_connect.php'; // Make sure your DB connection works
+require_once '../api/config/db_connect.php'; // Make sure your DB connection works
 
 // Example user info (replace with form input if needed)
 $email = 'admin@baskcafe.site';

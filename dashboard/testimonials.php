@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once '../config/db_connect.php';
+require_once '../api/config/db_connect.php';
 
 // Handle status filter
 $status_filter = isset($_GET['status']) ? $_GET['status'] : 'all';
