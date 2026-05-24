@@ -1,4 +1,4 @@
-config/local_env.php
+**/local_env.php
 .env
 node_modules/
 .DS_Store
