@@ -1844,7 +1844,9 @@ padding: 30px 50px;
   }
 
   .product_card:nth-child(-n+2) { margin-top: -72px; }
-
+  .product_card:nth-child(3) {
+    margin-top: 0;
+  }
   .product_card {
     margin-top: 0;
     height: auto;
