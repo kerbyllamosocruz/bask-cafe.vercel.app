@@ -1,36 +1,35 @@
-const images = [
-    "asset/index/baskcafe1.jpg",
-    "asset/index/baskcafe2.jpg",
-    "asset/index/baskcafe3.jpg",
-    "asset/index/baskcafe4.jpg",
-    "asset/index/baskcafe5.jpg"
-  ];
+const totalImages = 5;
+let currentIndex = 0;
+let autoTimer;
 
-  let currentIndex = 0;
-  const carouselImage = document.getElementById("carouselImage");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+const images = Array.from({ length: totalImages }, (_, i) =>
+  document.getElementById(`carouselImage${i}`)
+);
+const dots = Array.from(document.querySelectorAll('.carousel_dot'));
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-  function updateImage(index) {
-    carouselImage.src = images[index];
-  }
+function goTo(index) {
+  images[currentIndex].classList.remove('carousel_active');
+  dots[currentIndex].classList.remove('active');
+  currentIndex = (index + totalImages) % totalImages;
+  images[currentIndex].classList.add('carousel_active');
+  dots[currentIndex].classList.add('active');
+}
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateImage(currentIndex);
-  });
+function startAuto() {
+  autoTimer = setInterval(() => goTo(currentIndex + 1), 3500);
+}
 
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage(currentIndex);
-  });
+function resetAuto() {
+  clearInterval(autoTimer);
+  startAuto();
+}
 
-  const autoScrollInterval = 3000; 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage(currentIndex);
-  }, autoScrollInterval);
+prevBtn.addEventListener('click', () => { goTo(currentIndex - 1); resetAuto(); });
+nextBtn.addEventListener('click', () => { goTo(currentIndex + 1); resetAuto(); });
+dots.forEach(dot => {
+  dot.addEventListener('click', () => { goTo(Number(dot.dataset.index)); resetAuto(); });
+});
 
-
-
-
+startAuto();

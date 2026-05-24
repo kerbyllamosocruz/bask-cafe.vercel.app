@@ -35,13 +35,26 @@
       </div>
     </header>
 
-    <div class="header_img_container">
-      <img src="asset/index/header_img.png" width="100%" />
-      <div class="header-text">
-        <h1>Bask Café</h1>
-        <p>Slow Coffee Club</p>
+    <div class="hero_section">
+      <div class="hero_img_wrapper">
+        <img src="asset/index/header_img.png" alt="Bask Café" />
+        <div class="hero_overlay"></div>
+      </div>
+      <div class="hero_content">
+        <p class="hero_eyebrow">Welcome to</p>
+        <h1 class="hero_title">Bask Café</h1>
+        <p class="hero_tagline">Slow Coffee Club</p>
+        <div class="hero_actions">
+          <a href="/menu.html"><button class="button_green">View Menu</button></a>
+          <a href="/about.html"><button class="button_outline_hero">Our Story</button></a>
+        </div>
+      </div>
+      <div class="hero_scroll_hint">
+        <span>Scroll</span>
+        <div class="hero_scroll_line"></div>
       </div>
     </div>
+
     <div>
       <img
         class="promo_img"
@@ -70,34 +83,46 @@
         </div>
       </div>
       <div class="image_carousel">
+      <div class="image_carousel">
         <button class="carousel_btn" id="prevBtn">&#9664;</button>
 
-        <img
-          id="carouselImage"
-          src="asset/index/baskcafe1.jpg"
-          alt="Carousel Image"
-        />
+        <img id="carouselImage0" src="asset/index/baskcafe1.jpg" alt="Carousel Image" class="carousel_active" />
+        <img id="carouselImage1" src="asset/index/baskcafe2.jpg" alt="Carousel Image" />
+        <img id="carouselImage2" src="asset/index/baskcafe3.jpg" alt="Carousel Image" />
+        <img id="carouselImage3" src="asset/index/baskcafe4.jpg" alt="Carousel Image" />
+        <img id="carouselImage4" src="asset/index/baskcafe5.jpg" alt="Carousel Image" />
 
         <button class="carousel_btn" id="nextBtn">&#9654;</button>
+
+        <div class="carousel_dots">
+          <button class="carousel_dot active" data-index="0"></button>
+          <button class="carousel_dot" data-index="1"></button>
+          <button class="carousel_dot" data-index="2"></button>
+          <button class="carousel_dot" data-index="3"></button>
+          <button class="carousel_dot" data-index="4"></button>
+        </div>
+      </div>
       </div>
     </div>
 
     <div class="ref_contact">
       <div class="announcement">
-        <img src="asset/index/announcement_img2.jpg" />
+        <div class="announcement_img_wrap">
+          <img src="asset/index/announcement_img2.jpg" alt="Announcement" />
+        </div>
         <div class="announcement_txt">
-          <h2 class="light_text">Announcement</h2>
-          <br />
-          <hr />
-          <br />
-          <p class="light_text">
+          <span class="announcement_badge">✦ New Update</span>
+          <h2>Loyalty Card is Here</h2>
+          <hr class="announcement_divider" />
+          <p>
             Together with the grand opening of our Marulas branch, your daily
             brew just got more rewarding 🎉<br /><br />
-            Introducing our new Loyalty Card! Loyal sippers got perks 😎<br /><br />Now
-            available on both branches!
+            Loyal sippers got perks 😎 — now available on both branches!
           </p>
-          <p class="light_text">📍4B Little Baguio St., Marulas, Valenzuela</p>
-          <p class="light_text">📍1503 Padrigal St., Karuhatan, Valenzuela</p>
+          <div class="announcement_locations">
+            <p>📍 4B Little Baguio St., Marulas, Valenzuela</p>
+            <p>📍 1503 Padrigal St., Karuhatan, Valenzuela</p>
+          </div>
         </div>
       </div>
       <div class="second_text">
@@ -105,7 +130,7 @@
         <hr />
         <p>
           Stay updated with our latest offerings, from new menu items to special
-          promotions. Don’t miss out on what’s brewing!
+          promotions. Don't miss out on what's brewing!
         </p>
         <br />
         <a href="/contact.html">
@@ -115,20 +140,23 @@
     </div>
 
     <div class="top_products">
-      <div class="line_heading">
-        <hr />
-        <h1>Popular Picks, Made for You</h1>
-        <hr />
+      <div class="picks_header">
+        <div class="picks_header_left">
+          <span class="picks_eyebrow">Our Favourites</span>
+          <h1>Popular Picks</h1>
+        </div>
+        <a href="/menu.html"><button class="button_green">See Full Menu</button></a>
       </div>
+      <p class="picks_subtext">Handpicked by our regulars — coffee, bites &amp; sweets worth coming back for.</p>
       <div class="top_products_container">
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/biscoff.jpg" />
+            <img src="asset/index/biscoff.jpg" alt="Biscoff Croissant" />
+            <span class="card_category_tag">Sweet</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Biscoff Croissant</p>
-              <p class="prod_category">Sweet</p>
             </div>
             <p class="prod_price">₱120</p>
           </div>
@@ -136,12 +164,12 @@
 
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/katsu.jpg" />
+            <img src="asset/index/katsu.jpg" alt="Chicken Katsudon" />
+            <span class="card_category_tag">Main</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Chicken Katsudon</p>
-              <p class="prod_category">Main</p>
             </div>
             <p class="prod_price">₱150</p>
           </div>
@@ -149,12 +177,12 @@
 
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/matcha.jpg" />
+            <img src="asset/index/matcha.jpg" alt="Matcha Latte" />
+            <span class="card_category_tag">Non-Coffee</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Matcha Latte</p>
-              <p class="prod_category">Non-Coffee</p>
             </div>
             <p class="prod_price">₱135</p>
           </div>
@@ -162,12 +190,12 @@
 
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/trufflepasta.jpg" />
+            <img src="asset/index/trufflepasta.jpg" alt="Truffle Pasta" />
+            <span class="card_category_tag">Main</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Truffle Pasta</p>
-              <p class="prod_category">Main</p>
             </div>
             <p class="prod_price">₱160</p>
           </div>
@@ -175,12 +203,12 @@
 
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/darkmocha.jpg" />
+            <img src="asset/index/darkmocha.jpg" alt="Dark Mocha" />
+            <span class="card_category_tag">Coffee</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Dark Mocha</p>
-              <p class="prod_category">Coffee</p>
             </div>
             <p class="prod_price">₱145</p>
           </div>
@@ -188,12 +216,12 @@
 
         <div class="product_card">
           <div class="img_container">
-            <img src="asset/index/swisschocolatecake.JPG" />
+            <img src="asset/index/swisschocolatecake.JPG" alt="Swiss Chocolate" />
+            <span class="card_category_tag">Sweet</span>
           </div>
           <div class="product_info">
             <div class="product_details">
               <p class="prod_name">Swiss Chocolate</p>
-              <p class="prod_category">Sweet</p>
             </div>
             <p class="prod_price">₱155</p>
           </div>
@@ -317,72 +345,52 @@
     <footer>
       <div class="footer_container">
         <div class="footer_content">
-          <div class="logo">
-            <a href="/">
-              <img src="asset/logo.png" alt="Bask Cafe Logo" id="logo" />
-            </a>
+
+          <div class="footer_brand">
+            <div class="logo">
+              <a href="/"><img src="asset/logo.png" alt="Bask Cafe Logo" /></a>
+            </div>
+            <hr class="footer_divider" />
+            <p class="footer_tagline">Good coffee, great food, and cozy moments — that's Bask Café.</p>
           </div>
 
-          <nav class="nav_menu">
-            <a href="/about.html">About Us</a>
-            <a href="/menu.html">Menu</a>
-            <a href="/gallery.html">Gallery</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/review.php">Review</a>
-          </nav>
+          <div class="footer_nav_col">
+            <p class="footer_col_label">Navigate</p>
+            <nav class="nav_menu">
+              <a href="/about.html">About Us</a>
+              <a href="/menu.html">Menu</a>
+              <a href="/gallery.html">Gallery</a>
+              <a href="/contact.html">Contact</a>
+              <a href="/review.php">Review</a>
+            </nav>
+          </div>
+
+          <div class="footer_info_col">
+            <div>
+              <p class="footer_col_label">Find Us</p>
+              <div class="footer_hours">
+                <span>📍 Marulas & Karuhatan, Valenzuela</span>
+                <strong>Mon – Sun &nbsp;·&nbsp; 8 AM – 9 PM</strong>
+              </div>
+            </div>
+            <div>
+              <p class="footer_col_label">Follow Along</p>
+              <div class="social_icons">
+                <a href="https://www.facebook.com/profile.php?id=61569599993182" aria-label="Facebook" target="_blank">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/baskcafe_/" aria-label="Instagram" target="_blank">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div class="footer_bottom">
-          <div class="copyright">
-            Bask Café&copy; 2025. All rights reserved.
-          </div>
-          <div class="footer_center">
-            Designed & Developed by Aguilar & Cruz
-          </div>
-          <div class="social_icons">
-            <a
-              href="https://www.facebook.com/profile.php?id=61569599993182"
-              aria-label="Facebook"
-              target="_blank"
-            >
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/baskcafe_/"
-              aria-label="Instagram"
-              target="_blank"
-            >
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                ></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-          </div>
+          <div class="copyright">Bask Café &copy; 2025. All rights reserved.</div>
+          <div class="footer_center">Designed &amp; Developed by Aguilar &amp; Cruz</div>
         </div>
       </div>
     </footer>
