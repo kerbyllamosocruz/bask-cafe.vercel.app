@@ -1085,7 +1085,8 @@ padding: 30px 50px;
 }
 
 .second_container {
-  height: 450px;
+  min-height: 300px;
+  height: auto;
   background-color: #efebe2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   margin: 30px 90px;
@@ -2006,7 +2007,7 @@ padding: 30px 50px;
   }
 
   .second_container {
-    height: 700px;
+    height: auto;
     padding: 15px 0 0;
   }
 
