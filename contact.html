@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
   <body>
        <header class="main_header">
@@ -62,7 +64,6 @@
             </svg>
             Our Location
           </h3>
-          <p>1503 Padrigal Street, Karuhatan, Valenzuela City</p>
           <p>4B Little Baguio, Marulas, Valenzuela City</p>
           <h3>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="contact_icon">
@@ -88,15 +89,8 @@
             </a>
           </div>
         </div>
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.2286154967723!2d120.98753991663858!3d14.675348566472252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7d650dd08a1%3A0x7c3378916e4c0e44!2sBask%20Caf%C3%A9!5e0!3m2!1sen!2sph!4v1746766563311!5m2!1sen!2sph"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map_container" style="width: 600px; max-width: 100%;">
+          <div id="leaflet-map" style="width: 100%; height: 450px; z-index: 1;"></div>
         </div>
       </div>
     </div>
@@ -239,6 +233,20 @@ document.getElementById("contact_form").addEventListener("submit", function (e) 
     // Re-attach event listener after config.js loads
     // Actually, distinct script blocks run in order.
     // We can just update the inline script logic.
+ </script>
+ <script>
+    // Leaflet map initialization
+    document.addEventListener("DOMContentLoaded", function() {
+      const map = L.map('leaflet-map').setView([14.675348566472252, 120.98753991663858], 18);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([14.675348566472252, 120.98753991663858]).addTo(map)
+        .bindPopup('<b>Bask Café</b><br>4B Little Baguio, Marulas, Valenzuela City')
+        .openPopup();
+    });
  </script>
 
   </body>
